@@ -9,6 +9,11 @@ const routes: Routes = [
   {
     path: 'produtos/cadastro',
     loadChildren: () => import('./Components/cadastro/cadastrar.module').then(m => m.CadastrarModule)
+  },
+  {
+    path: '',
+    redirectTo: 'produtos',
+    pathMatch: 'full'
   }
 ];
 

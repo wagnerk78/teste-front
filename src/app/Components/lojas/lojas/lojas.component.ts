@@ -16,7 +16,8 @@ ngOnInit(): void {
 
 lojas: Lojas[ ] = [
   {id: '1', nome: 'Loja 1', valor_venda: 3},
-  {id: '2', nome: 'Loja 2', valor_venda: 5}
+  {id: '2', nome: 'Loja 2', valor_venda: 5},
+  {id: '3', nome: 'Loja 3', valor_venda: 7}
 ];
 displayedColumns = ['add', 'nome', 'valor_venda', 'delete', 'edit']
 
