@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Lojas } from './model/lojas';
+import { MatDialog } from '@angular/material/dialog';
+import { LojaFormDialogComponent } from './loja-form-dialog/loja-form-dialog.component';
 
 @Component({
   selector: 'app-lojas',
@@ -18,7 +20,21 @@ lojas: Lojas[ ] = [
 ];
 displayedColumns = ['add', 'nome', 'valor_venda', 'delete', 'edit']
 
+constructor(public dialog: MatDialog) {}
+
+openDialog(): void {
+  const dialogRef = this.dialog.open(LojaFormDialogComponent, {
+   width: '700px'
+  });
 
 
-
+  dialogRef.afterClosed().subscribe(result => {
+    console.log('The dialog was closed');
+  });
 }
+}
+
+
+
+
+

@@ -1,0 +1,43 @@
+<mat-dialog-content>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button
+        mat-icon-button
+        color="secondary"
+        aria-label="adicionar produto"
+        routerLink="#"
+      >
+        <mat-icon>save</mat-icon>
+      </button>
+
+      <span class="example-spacer">Alteração/Inclusão do Preço</span>
+      <button
+        mat-icon-button
+        color="secondary"
+        aria-label="adicionar produto"
+        (click)="cancelar()"
+      >
+        <mat-icon>cancel</mat-icon>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <div class="container">
+    <div class="container-1" >
+      <mat-form-field>
+        <mat-label>Loja</mat-label>
+        <select matNativeControl required disableRipple>
+          <option value="loja1">Loja 1</option>
+          <option value="loja2">Loja 2</option>
+          <option value="loja3">Loja 3</option>
+        </select>
+      </mat-form-field>
+    </div>
+    <div></div>
+    <div class="container-2">
+      <mat-form-field appearance="outline">
+        <mat-label>Preço de Venda (R$)</mat-label>
+        <input matInput />
+      </mat-form-field>
+    </div>
+  </div>
+</mat-dialog-content>

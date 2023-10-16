@@ -7,7 +7,7 @@
           <!-- Código Column -->
           <ng-container matColumnDef="add">
             <th mat-header-cell *matHeaderCellDef>
-              <button mat-icon-button color="secondary" aria-label="adicionar produto" >
+              <button mat-icon-button color="secondary" aria-label="adicionar produto" (click)="openDialog()">
               <mat-icon>add_circle</mat-icon>
             </button></th>
             <td mat-cell *matCellDef="let element"></td>

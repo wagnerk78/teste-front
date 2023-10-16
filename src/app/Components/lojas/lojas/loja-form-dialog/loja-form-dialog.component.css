@@ -1,0 +1,18 @@
+.example-spacer {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+}
+
+.container-2 {
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+.container-1 {
+  margin-top: 40px;
+
+}
