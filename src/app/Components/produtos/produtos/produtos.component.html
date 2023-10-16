@@ -1,0 +1,85 @@
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button color="secondary" aria-label="adicionar produto" routerLink="/produtos/cadastro">
+      <mat-icon>add_circle</mat-icon>
+    </button>
+    <span class="example-spacer">Consulta de Produtos</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<!--Fórmulário para incluir os itens. -->
+<mat-card>
+  <mat-grid-list cols="5" rowHeight="150px">
+    <mat-grid-tile>
+      <mat-form-field appearance="outline">
+        <mat-label>Código</mat-label>
+        <input matInput />
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field appearance="outline">
+        <mat-label>Descrição</mat-label>
+        <input matInput />
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field appearance="outline">
+        <mat-label>Preço de Custo</mat-label>
+        <input matInput />
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field appearance="outline">
+        <mat-label>Preço de Venda</mat-label>
+        <input matInput />
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile></mat-grid-tile>
+  </mat-grid-list>
+</mat-card>
+<!--Tabela com os itens incluídos -->
+
+
+
+<mat-card>
+  <mat-card-content>
+    <table mat-table [dataSource]="produtos" class="mat-elevation-z8">
+      <!-- Código Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>Código</th>
+        <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+      </ng-container>
+
+      <!-- Descrição Column -->
+      <ng-container matColumnDef="descricao">
+        <th mat-header-cell *matHeaderCellDef>Descrição</th>
+        <td mat-cell *matCellDef="let element">{{ element.descricao }}</td>
+      </ng-container>
+
+      <!-- Custo Column -->
+      <ng-container matColumnDef="valor_custo">
+        <th mat-header-cell *matHeaderCellDef>Custo (R$)</th>
+        <td mat-cell *matCellDef="let element">{{ element.valor_custo }}</td>
+      </ng-container>
+
+      <!-- Actions Column -->
+      <ng-container matColumnDef="delete">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-icon-button color="primary" aria-label="Deletar produto">
+            <mat-icon>delete</mat-icon>
+          </button>
+          <button mat-icon-button color="primary" aria-label="Editar produto">
+            <mat-icon>edit</mat-icon>
+          </button>
+      </td>
+      </ng-container>
+      <ng-container matColumnDef="edit">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element"></td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </mat-card-content>
+</mat-card>

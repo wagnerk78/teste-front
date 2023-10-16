@@ -1,0 +1,54 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button
+      mat-icon-button
+      color="secondary"
+      aria-label="adicionar produto"
+      routerLink="#"
+    >
+      <mat-icon>save</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      color="secondary"
+      aria-label="adicionar produto"
+      routerLink="#"
+    >
+      <mat-icon>delete</mat-icon>
+    </button>
+    <span class="example-spacer">Cadastro do Produto</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<!--Fórmulário para incluir os itens. -->
+<mat-card>
+  <mat-grid-list cols="5" rowHeight="300px">
+    <mat-grid-tile>
+      <mat-form-field appearance="outline">
+        <mat-label>Código</mat-label>
+        <input matInput />
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field appearance="outline">
+        <mat-label>Descrição</mat-label>
+        <input matInput />
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field appearance="outline">
+        <mat-label>Preço de Custo</mat-label>
+        <input matInput />
+      </mat-form-field>
+    </mat-grid-tile>
+
+  <mat-grid-tile>
+      <img class="example-card"
+        mat-card-image
+        src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+        alt="Photo of a Shiba Inu"
+      />
+  </mat-grid-tile>
+  <mat-grid-tile></mat-grid-tile>
+</mat-grid-list>
+</mat-card>
+<app-lojas></app-lojas>
